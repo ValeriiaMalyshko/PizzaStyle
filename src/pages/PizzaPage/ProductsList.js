@@ -1,10 +1,10 @@
 import React from "react";
 import ProductsCard from "../../components/ProductsCard/ProductsCard";
-// import s from "./UserList.module.css";
+import s from "./PizzaPage.module.css";
 
 const ProductsList = ({ elements }) => {
   return (
-    <ul>
+    <ul className={s.ul}>
       {elements.map(({ id, title, description, price, image }) => {
         return (
           <ProductsCard
