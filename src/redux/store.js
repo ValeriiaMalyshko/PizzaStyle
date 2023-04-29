@@ -10,7 +10,8 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { ordersReducer } from "./orders-Slice";
+import { cartReducer } from "./slice/slice";
+// import counterReducer from "./slice/counterSlice";
 
 const middleware = (getDefaultMiddleware) => [
   ...getDefaultMiddleware({
@@ -21,12 +22,13 @@ const middleware = (getDefaultMiddleware) => [
 ];
 
 const persistConfig = {
-  key: "order",
+  key: "root",
   storage,
 };
 export const store = configureStore({
   reducer: {
-    order: persistReducer(persistConfig, ordersReducer),
+    root: persistReducer(persistConfig, cartReducer),
+    // counter: counterReducer,
   },
   middleware,
 });

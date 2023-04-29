@@ -34,3 +34,6 @@
 .link:first-child {
   margin-right: 60px;
 }
+.link:last-child {
+  display: flex;
+}
