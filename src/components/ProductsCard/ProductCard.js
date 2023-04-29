@@ -5,7 +5,7 @@ import {
   addToCart,
   incrementQuantity,
   decrementQuantity,
-} from "../../redux/slice/slice";
+} from "../../redux/slice/cartSlice";
 
 export default function ProductCard({
   id,
@@ -24,7 +24,7 @@ export default function ProductCard({
       </div>
       <div className={s.title}>{title}</div>
       <div className={s.description}> {description}</div>
-      <div className={s.price}>{price} UAH</div>
+      <div className={s.price}>{price} $</div>
       <div>
         <button
           className={s.btn}
@@ -32,11 +32,11 @@ export default function ProductCard({
           onClick={() =>
             dispatch(
               addToCart({
-                id,
-                title,
-                description,
-                price,
-                image,
+                id: id,
+                title: title,
+                description: description,
+                price: price,
+                image: image,
               })
             )
           }

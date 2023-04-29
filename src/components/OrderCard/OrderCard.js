@@ -5,7 +5,7 @@ import {
   incrementQuantity,
   decrementQuantity,
   removeItem,
-} from "../../redux/slice/slice";
+} from "../../redux/slice/cartSlice";
 
 export default function OrderCard({
   id,
@@ -13,18 +13,16 @@ export default function OrderCard({
   description,
   price,
   image,
-  quantity,
+  quantity = 0,
 }) {
   const dispatch = useDispatch();
 
   return (
     <li id={id} className={s.li}>
-      <div>
-        <img src={image} alt={title} className={s.img}></img>
-      </div>
+      <img src={image} alt={title} className={s.img}></img>
       <p className={s.title}>{title}</p>
-      <p className={s.description}> {description}</p>
-      <p className={s.price}>{price} UAH</p>
+      <p className={s.description}>{description}</p>
+      <p className={s.price}>{price} $</p>
       <div className={s.row}>
         <button
           className={s.button}

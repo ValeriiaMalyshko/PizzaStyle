@@ -7,14 +7,16 @@ import { useSelector } from "react-redux";
 
 export default function Header() {
   const cart = useSelector((state) => state.cart);
+  console.log(cart);
 
   const getTotalQuantity = () => {
     let total = 0;
-    cart?.forEach((item) => {
+    cart.forEach((item) => {
       total += item.quantity;
     });
     return total;
   };
+
   return (
     <>
       <header className={s.header}>

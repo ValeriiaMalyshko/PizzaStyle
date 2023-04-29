@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 // import s from "./UserList.module.css";
 import { useSelector } from "react-redux";
 import OrderCard from "../../components/OrderCard/OrderCard";
+import { clearCart } from "../../redux/slice/cartSlice";
+import { useDispatch } from "react-redux";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
   console.log(cart);
+  const dispatch = useDispatch();
 
   const getTotal = () => {
     let totalQuantity = 0;
@@ -19,28 +22,36 @@ const Cart = () => {
   };
   return (
     <>
-      <div>
-        <h2>
-          Please, choose pizza <Link to="/">here</Link>
-        </h2>
-      </div>
-      <div>
-        <h3>Pizza Cart</h3>
-        {cart?.map((item) => (
-          <OrderCard
-            key={item.id}
-            id={item.id}
-            image={item.image}
-            title={item.title}
-            price={item.price}
-            quantity={item.quantity}
-          />
-        ))}
-        <p className="total__p">
-          total ({getTotal().totalQuantity} items) :{" "}
-          <strong>${getTotal().totalPrice}</strong>
-        </p>
-      </div>
+      {cart?.length === 0 ? (
+        <div>
+          <h2>
+            Please, choose pizza <Link to="/">here</Link>
+          </h2>
+        </div>
+      ) : (
+        <div>
+          <h3>Pizza Cart</h3>
+          {cart?.map((item) => (
+            <OrderCard
+              key={item.id}
+              id={item.id}
+              image={item.image}
+              title={item.title}
+              price={item.price}
+              description={item.description}
+              quantity={item.quantity}
+            />
+          ))}
+          <button type="button" onClick={() => dispatch(clearCart())}>
+            Make an order
+          </button>
+
+          <p className="total__p">
+            total ({getTotal().totalQuantity} items) :{" "}
+            <strong>${getTotal().totalPrice}</strong>
+          </p>
+        </div>
+      )}
     </>
   );
 };
