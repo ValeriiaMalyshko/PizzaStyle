@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import s from "./UserList.module.css";
+import s from "./Cart.module.css";
 import { useSelector } from "react-redux";
 import OrderCard from "../../components/OrderCard/OrderCard";
 import { clearCart } from "../../redux/slice/cartSlice";
@@ -42,11 +42,15 @@ const Cart = () => {
               quantity={item.quantity}
             />
           ))}
-          <button type="button" onClick={() => dispatch(clearCart())}>
+          <button
+            type="button"
+            className={s.btn}
+            onClick={() => dispatch(clearCart())}
+          >
             Make an order
           </button>
 
-          <p className="total__p">
+          <p className={s.p}>
             total ({getTotal().totalQuantity} items) :{" "}
             <strong>${getTotal().totalPrice}</strong>
           </p>

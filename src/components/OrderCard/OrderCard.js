@@ -19,10 +19,12 @@ export default function OrderCard({
 
   return (
     <li id={id} className={s.li}>
-      <img src={image} alt={title} className={s.img}></img>
-      <p className={s.title}>{title}</p>
-      <p className={s.description}>{description}</p>
-      <p className={s.price}>{price} $</p>
+      <div>
+        <img src={image} alt={title} className={s.img}></img>
+      </div>
+      <div className={s.title}>{title}</div>
+      <div className={s.description}>{description}</div>
+      <div className={s.price}>{price} $</div>
       <div className={s.row}>
         <button
           className={s.button}

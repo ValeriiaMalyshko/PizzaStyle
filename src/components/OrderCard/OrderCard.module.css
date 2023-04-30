@@ -1,9 +1,6 @@
 .li {
   list-style: none;
   padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .img {
   width: 110px;
@@ -14,20 +11,20 @@
   line-height: 1.5;
   color: rgb(0, 0, 0);
   text-align: center;
-  width: 200px;
+  margin-top: 10px;
 }
 .description {
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
   color: rgb(0, 0, 0);
-  width: 300px;
+  margin-top: 10px;
 }
 .price {
   font-size: 20px;
   line-height: 1.5;
   color: rgb(0, 0, 0);
-  width: 100px;
+  margin-top: 10px;
 }
 .btn {
   width: 120px;
@@ -36,7 +33,7 @@
   line-height: 1.5;
   color: white;
   background-color: red;
-  margin-top: 5px;
+  margin-top: 10px;
   border-radius: 10%;
   border: none;
   cursor: pointer;
@@ -52,6 +49,9 @@
   border-radius: 10%;
   display: flex;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
 .button {
   background-color: rgb(228, 228, 228);
@@ -78,14 +78,53 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .ul {
-    max-width: 768px;
-    grid-template-columns: repeat(2, 1fr);
+  .li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title {
+    width: 150px;
+    margin: 0;
+  }
+  .description {
+    width: 100px;
+    margin: 0;
+  }
+  .price {
+    width: 100px;
+    margin: 0;
+  }
+  .btn {
+    margin: 0;
+  }
+  .row {
+    margin: 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .ul {
-    max-width: 1280px;
-    grid-template-columns: repeat(3, 1fr);
+  .li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+  .title {
+    width: 200px;
+    margin: 0;
+  }
+  .description {
+    width: 300px;
+    margin: 0;
+  }
+  .price {
+    width: 100px;
+    margin: 0;
+  }
+  .btn {
+    margin: 0;
+  }
+  .row {
+    margin: 0;
   }
 }

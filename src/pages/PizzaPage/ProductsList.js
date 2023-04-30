@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCard from "../../components/ProductsCard/ProductCard";
-import s from "./PizzaPage.module.css";
+import s from "./ProductsList.module.css";
 
 const ProductsList = ({ elements }) => {
   return (
