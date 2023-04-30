@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 
 export default function Header() {
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
 
   const getTotalQuantity = () => {
     let total = 0;

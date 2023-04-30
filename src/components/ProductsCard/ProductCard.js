@@ -11,7 +11,6 @@ import {
 
 export default function ProductCard({ id, title, description, price, image }) {
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
 
   const dispatch = useDispatch();
 

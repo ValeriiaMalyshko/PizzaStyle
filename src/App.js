@@ -7,7 +7,6 @@ import ProductsList from "./pages/PizzaPage/ProductsList";
 import Cart from "./pages/CartPage/Cart";
 
 function App() {
-  console.log(products);
   return (
     <div className="App">
       <Header />
