@@ -24,7 +24,7 @@ export default function OrderCard({
       </div>
       <div className={s.title}>{title}</div>
       <div className={s.description}>{description}</div>
-      <div className={s.price}>{price} $</div>
+      <div className={s.price}>{price} UAH</div>
       <div className={s.row}>
         <button
           className={s.button}
