@@ -1,6 +1,5 @@
 import React from "react";
 import s from "./OrderCard.module.css";
-import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import {
   incrementQuantity,
@@ -16,12 +15,10 @@ export default function OrderCard({
   image,
   quantity = 0,
 }) {
-  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const handDecrement = () => {
-    const newQuantity = cart.map((item) => item.quantity === 0);
-    if (newQuantity) {
+    if (quantity < 2) {
       dispatch(removeItem(id));
     } else {
       dispatch(decrementQuantity(id));

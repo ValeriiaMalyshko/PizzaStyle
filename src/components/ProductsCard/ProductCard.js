@@ -24,8 +24,7 @@ export default function ProductCard({ id, title, description, price, image }) {
   }, [cart, id]);
 
   const handDecrement = () => {
-    const newQuantity = cart.map((item) => item.quantity === 0);
-    if (newQuantity) {
+    if (count < 2) {
       dispatch(removeItem(id));
     } else {
       dispatch(decrementQuantity(id));
