@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import s from "./Header.module.css";
 import icon from "../../assets/pizza.svg";
 import icon2 from "../../assets/order.svg";
@@ -31,10 +31,16 @@ export default function Header() {
           <p className={s.name}>PizzaStyle</p>
         </div>
         <nav className={s.nav}>
-          <Link to="/" className={s.link}>
+          <NavLink
+            to="/"
+            className={({ isActive }) => `${isActive ? s.active : s.link}`}
+          >
             Pizza
-          </Link>
-          <Link to="/cart" className={s.link}>
+          </NavLink>
+          <NavLink
+            to="/cart"
+            className={({ isActive }) => `${isActive ? s.active : s.link}`}
+          >
             <img
               src={icon2}
               alt="Order"
@@ -43,7 +49,7 @@ export default function Header() {
               className={s.img}
             ></img>
             <p>{getTotalQuantity() || 0}</p>
-          </Link>
+          </NavLink>
         </nav>
       </header>
     </>

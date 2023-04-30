@@ -6,6 +6,7 @@ import {
   addToCart,
   incrementQuantity,
   decrementQuantity,
+  removeItem,
 } from "../../redux/slice/cartSlice";
 
 export default function ProductCard({ id, title, description, price, image }) {
@@ -22,6 +23,15 @@ export default function ProductCard({ id, title, description, price, image }) {
       if (newCount) setCount(newCount.quantity);
     }
   }, [cart, id]);
+
+  const handDecrement = () => {
+    const newQuantity = cart.map((item) => item.quantity === 0);
+    if (newQuantity) {
+      dispatch(removeItem(id));
+    } else {
+      dispatch(decrementQuantity(id));
+    }
+  };
 
   return (
     <li id={id} className={s.li}>
@@ -56,7 +66,7 @@ export default function ProductCard({ id, title, description, price, image }) {
           <button
             className={s.button}
             aria-label="Decrement value"
-            onClick={() => dispatch(decrementQuantity(id))}
+            onClick={handDecrement}
           >
             -
           </button>

@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./OrderCard.module.css";
+import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import {
   incrementQuantity,
@@ -15,7 +16,17 @@ export default function OrderCard({
   image,
   quantity = 0,
 }) {
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
+  const handDecrement = () => {
+    const newQuantity = cart.map((item) => item.quantity === 0);
+    if (newQuantity) {
+      dispatch(removeItem(id));
+    } else {
+      dispatch(decrementQuantity(id));
+    }
+  };
 
   return (
     <li id={id} className={s.li}>
@@ -29,7 +40,7 @@ export default function OrderCard({
         <button
           className={s.button}
           aria-label="Decrement value"
-          onClick={() => dispatch(decrementQuantity(id))}
+          onClick={handDecrement}
         >
           -
         </button>

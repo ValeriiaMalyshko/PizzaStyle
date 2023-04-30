@@ -30,10 +30,22 @@
   color: white;
   margin-top: auto;
   margin-bottom: auto;
+  text-decoration: none;
 }
-.link:first-child {
+.link:first-child,
+.active:first-child {
   margin-right: 60px;
 }
-.link:last-child {
+.link:last-child,
+.active:last-child {
   display: flex;
+}
+
+.active {
+  font-size: 20px;
+  line-height: 1.5;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: underline;
 }
