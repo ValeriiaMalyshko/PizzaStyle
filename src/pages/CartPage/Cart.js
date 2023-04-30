@@ -52,7 +52,7 @@ const Cart = () => {
 
           <p className={s.p}>
             total ({getTotal().totalQuantity} items) :{" "}
-            <strong> UAH{getTotal().totalPrice}</strong>
+            <strong> UAH {getTotal().totalPrice}</strong>
           </p>
         </div>
       )}

@@ -5,7 +5,7 @@ export const products = [
     description: "A classic pizza topped with pepperoni slices.",
     price: 99,
     image:
-      "https://panda-pizza.com.ua/cache/dish-mobile/img/dishes/pizza/4seasons.jpg?130223",
+      "https://panda-pizza.com.ua/cache/dish/img/dishes/pizza/pepperoni.jpg?130223",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ export const products = [
       "A simple yet delicious pizza topped with tomato sauce, mozzarella cheese, and fresh basil.",
     price: 109,
     image:
-      "https://panda-pizza.com.ua/cache/dish-mobile/img/dishes/pizza/4seasons.jpg?130223",
+      "https://panda-pizza.com.ua/cache/dish/img/dishes/pizza/margarita.jpg?130223",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const products = [
       "A controversial pizza topped with ham, pineapple, and mozzarella cheese.",
     price: 139,
     image:
-      "https://panda-pizza.com.ua/cache/dish-mobile/img/dishes/pizza/4seasons.jpg?130223",
+      "https://panda-pizza.com.ua/cache/dish/img/dishes/pizza/hawaii.jpg?130223",
   },
   {
     id: 4,
@@ -32,7 +32,7 @@ export const products = [
       "A pizza for meat lovers, topped with sausage, bacon, pepperoni, and ground beef.",
     price: 159,
     image:
-      "https://panda-pizza.com.ua/cache/dish-mobile/img/dishes/pizza/4seasons.jpg?130223",
+      "https://panda-pizza.com.ua/cache/dish/img/dishes/pizza/americana.jpg?130223",
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ export const products = [
       "A pizza for vegetarians, topped with mushrooms, bell peppers, onions, and olives.",
     price: 129,
     image:
-      "https://panda-pizza.com.ua/cache/dish-mobile/img/dishes/pizza/4seasons.jpg?130223",
+      "https://panda-pizza.com.ua/cache/dish/img/dishes/pizza/bolonia.jpg?130223",
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ export const products = [
       "A pizza topped with barbecue sauce, chicken, red onions, and mozzarella cheese.",
     price: 149,
     image:
-      "https://panda-pizza.com.ua/cache/dish-mobile/img/dishes/pizza/4seasons.jpg?130223",
+      "https://panda-pizza.com.ua/cache/dish/img/dishes/pizza/bbq.jpg?130223",
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const products = [
     description: "A simple pizza with just tomato sauce and mozzarella cheese.",
     price: 99,
     image:
-      "https://panda-pizza.com.ua/cache/dish-mobile/img/dishes/pizza/4seasons.jpg?130223",
+      "https://panda-pizza.com.ua/cache/dish/img/dishes/pizza/formaggio.jpg?130223",
   },
   {
     id: 9,
@@ -76,7 +76,7 @@ export const products = [
       "A pizza topped with spinach, feta cheese, and mozzarella cheese.",
     price: 139,
     image:
-      "https://panda-pizza.com.ua/cache/dish-mobile/img/dishes/pizza/4seasons.jpg?130223",
+      "https://panda-pizza.com.ua/cache/dish/img/dishes/pizza/pollo.jpg?130223",
   },
   {
     id: 10,
@@ -85,6 +85,6 @@ export const products = [
       "A pizza topped with spicy buffalo sauce, chicken, and mozzarella cheese.",
     price: 149,
     image:
-      "https://panda-pizza.com.ua/cache/dish-mobile/img/dishes/pizza/4seasons.jpg?130223",
+      "https://panda-pizza.com.ua/cache/dish/img/dishes/pizza/leonardo.jpg?130223",
   },
 ];
